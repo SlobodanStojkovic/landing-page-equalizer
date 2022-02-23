@@ -55,7 +55,7 @@ select {
   font: inherit;
 }
 
-/* remove animations for people who've turned them off */
+/* remove animations for people who have turned animations off */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -67,3 +67,221 @@ select {
   }
 }
 /* End of reset styles */
+
+/* ibm-plex-sans-regular - latin */
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ibm-plex-sans-v13-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/ibm-plex-sans-v13-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/ibm-plex-sans-v13-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../src/fonts/ibm-plex-sans-v13-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/ibm-plex-sans-v13-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/ibm-plex-sans-v13-latin-regular.svg#IBMPlexSans")
+      format("svg"); /* Legacy iOS */
+}
+/* ibm-plex-sans-700 - latin */
+@font-face {
+  font-family: "IBM Plex Sans 700";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ibm-plex-sans-v13-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/ibm-plex-sans-v13-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/ibm-plex-sans-v13-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/ibm-plex-sans-v13-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../src/fonts/ibm-plex-sans-v13-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/ibm-plex-sans-v13-latin-700.svg#IBMPlexSans") format("svg"); /* Legacy iOS */
+}
+
+$ibmplexsans400: "IBM Plex Sans";
+$ibmplexsans700: "IBM Plex Sans 700";
+
+$white: #fcfaf9;
+$darkblue: #191826;
+$skyblue: #66e2dc;
+$lightred: #fa7453;
+$lightorange: #ffb964;
+
+body {
+  /*   background-image: url("../images/bg-main-mobile.png");
+  background-size: cover; */
+  font-family: $ibmplexsans400;
+}
+
+body::after {
+  content: "";
+  width: 382px;
+  height: 520px;
+  background-image: url(../images/bg-main-mobile.png);
+  background-size: cover;
+  background-position: 20% 60%;
+  position: absolute;
+  right: -110px;
+  top: -140px;
+  z-index: -1;
+}
+
+.header {
+  margin-bottom: 70px;
+}
+
+.header__pattern-1 {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.header__logo {
+  padding: 40px 24px 64px;
+}
+
+.header__title {
+  font-family: $ibmplexsans700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1px;
+  padding: 0 24px 20px;
+  color: $darkblue;
+}
+
+.header__text {
+  color: $darkblue;
+  padding: 0 24px 170px;
+}
+
+.main {
+  background-color: $darkblue;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 600px;
+  margin-bottom: 360px;
+}
+
+.main__phone {
+  z-index: 2;
+  height: 430px;
+  width: 209px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__pattern-2 {
+  position: absolute;
+  width: 75%;
+  text-align: center;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+}
+
+.premium-section {
+  background-color: $lightred;
+  border-radius: 12px;
+  width: 100%;
+  color: $white;
+  z-index: 3;
+  padding: 48px 36px;
+  position: absolute;
+  left: 50%;
+  bottom: -570px;
+  transform: translate(-50%, -50%);
+}
+
+.main__title {
+  font-family: $ibmplexsans700;
+  font-size: 32px;
+  line-height: 40px;
+  padding: 0 0 12px;
+}
+
+.main__text {
+  font-size: 18px;
+  line-height: 28px;
+  padding: 0 0 36px;
+}
+
+.main__price {
+  font-family: $ibmplexsans700;
+  font-size: 65px;
+  line-height: 52px;
+  padding: 0 0 32px;
+
+  & span {
+    font-family: $ibmplexsans400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    vertical-align: super;
+  }
+}
+
+.main__buttons {
+  text-align: center;
+}
+
+.ios-button {
+  width: 80%;
+  background-color: $darkblue;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  color: $white;
+  font-family: $ibmplexsans700;
+  border: none;
+  padding: 15px;
+}
+
+.android-button {
+  width: 80%;
+  background-color: $white;
+  color: $darkblue;
+  border-radius: 12px;
+  font-family: $ibmplexsans700;
+  border: none;
+  padding: 15px;
+}
+
+.footer {
+  padding: 0 24px 80px;
+}
+
+.footer__logo {
+  padding: 0 0 32px;
+}
+
+.footer__text {
+  color: $darkblue;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 0 64px;
+}
+
+.footer__email {
+  font-family: $ibmplexsans700;
+}
+
+.footer__social-media-icons {
+  & img {
+    padding: 0 20px 0 0;
+  }
+}
