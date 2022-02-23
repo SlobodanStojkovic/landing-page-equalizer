@@ -132,6 +132,26 @@ body::after {
   right: -110px;
   top: -140px;
   z-index: -1;
+
+  @media (min-width: 768px) {
+    background-image: url(../images/bg-main-tablet.png);
+    background-size: cover;
+    height: 667px;
+    width: 115%;
+    position: absolute;
+    right: 0px;
+    top: -100px;
+    z-index: -3;
+    background-position: unset;
+  }
+}
+
+.container {
+  padding: 0;
+
+  @media (min-width: 768px) {
+    padding: 0 39px 0 34px;
+  }
 }
 
 .header {
@@ -143,6 +163,11 @@ body::after {
 
   @media (min-width: 768px) {
     display: flex;
+    position: absolute;
+    height: 400px;
+    top: 0;
+    right: 0;
+    z-index: -1;
   }
 }
 
@@ -173,6 +198,11 @@ body::after {
   position: relative;
   height: 600px;
   margin-bottom: 360px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+    z-index: 1;
+  }
 }
 
 .main__phone {
@@ -183,6 +213,13 @@ body::after {
   top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: 768px) {
+    height: 556px;
+    width: 270px;
+    left: 25%;
+    top: 138px;
+  }
 }
 
 .main__pattern-2 {
@@ -193,6 +230,10 @@ body::after {
   left: 50%;
   top: 0;
   transform: translate(-50%);
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
 }
 
 .premium-section {
@@ -206,6 +247,13 @@ body::after {
   left: 50%;
   bottom: -570px;
   transform: translate(-50%, -50%);
+
+  @media (min-width: 768px) {
+    width: 60%;
+    left: unset;
+    right: -156px;
+    bottom: -314px;
+  }
 }
 
 .main__title {
@@ -263,6 +311,18 @@ body::after {
 
 .footer {
   padding: 0 24px 80px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 80px;
+  }
+}
+
+.footer__logo-and-text {
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 }
 
 .footer__logo {
@@ -281,7 +341,12 @@ body::after {
 }
 
 .footer__social-media-icons {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+
   & img {
-    padding: 0 20px 0 0;
+    width: 20px;
+    height: 20px;
   }
 }
